@@ -31,8 +31,10 @@ By setting `$debug_destination_mode = true;` (inside settings.php) the form will
 The default setting `$relay_logging = true;` (inside settings.php) will log relay usage. (But not emails addresses or email content.)
 
 Example logs:
+
 `Sunday, 10-May-20 22:03:47 UTC | error - destination not found for formSupport2
 Sunday, 10-May-20 22:17:32 UTC | Quotes / Sales >  mailgun response: Queued. Thank you.`
+
 
 
 
