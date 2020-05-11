@@ -9,19 +9,26 @@ Deliver seperate forms on your webflow site to different emails using a simple p
 ## Setup - Webflow
 
 1. Update the webflow script's _mailgunRelayEndpoint var to point to the live location of your mailgun-relay.php file.
-`var _mailgunRelayEndpoint = 'https://*yourendpointurl*/mailgun_relay.php';`
-2. Every form you wish to be relayed will need to add a Div attribute of data-relay="true" added inside of the webflow project.
+```
+var _mailgunRelayEndpoint = 'https://*yourendpointurl*/mailgun_relay.php';
+```
+2. Every form you wish to be relayed will need to add a Div attribute of data-relay="true" added inside of the webflow project:
+
 ![alt text](https://github.com/tri-bit/webflow-mailgun-php/blob/master/docs/images/webflow-settings-relay.png?raw=true "Relay Attribute")
+
 3. Check and confirm you have unique form names assigned inside of every Webflow form you want to relay. Also note the Relay attribute has been correctly added:
+
 ![alt text](https://github.com/tri-bit/webflow-mailgun-php/blob/master/docs/images/webflow-form-name.png?raw=true "Form Name")
 
 ## Setup - Php Server
 1. Update everything inside of asterisks (*) in the settings.php file.
 2. Update the relay destination array which maps the Webflow form names (Case Sensitive) to destination email addresses:
-`$relay_destinations = array(
+```
+$relay_destinations = array(
         "Form Name 1" => ['example@emailaddress.com'],
         "Form Name 2" => ['example2@emailaddress.com', 'example@emailaddress.com'],
-);`
+);
+```
 
 ## Testing your Form Setup
 By setting `$debug_destination_mode = true;` (inside settings.php) the form will not be sent on submission but will return the email destinations it would have gone to allowing you to confirm settings before going live. (Message will be viewable in the browser console.)
@@ -32,8 +39,9 @@ The default setting `$relay_logging = true;` (inside settings.php) will log rela
 
 Example logs:
 
-`Sunday, 10-May-20 22:03:47 UTC | error - destination not found for formSupport2
-Sunday, 10-May-20 22:17:32 UTC | Quotes / Sales >  mailgun response: Queued. Thank you.`
+`Sunday, 10-May-20 22:03:47 UTC | error - destination not found for formSupport2`
+`Sunday, 10-May-20 22:17:32 UTC | Quotes / Sales >  mailgun response: Queued. Thank you.`
+
 
 
 
