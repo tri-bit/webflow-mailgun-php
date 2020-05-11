@@ -13,7 +13,7 @@ Deliver seperate forms on your webflow site to different emails using a simple p
 3. Every form you wish to be relayed will need to add a Div attribute of data-relay="true" added inside of the webflow project.
 
 ## Testing your Form Setup
-By setting $debug_destination_mode to true (inside settings.php) the form will not be sent on submission but will return the email destinations it would have gone to allowing you to confirm settings before going live. (Message will be viewable in the website browser's console.)
+By setting `$debug_destination_mode = true;` (inside settings.php) the form will not be sent on submission but will return the email destinations it would have gone to allowing you to confirm settings before going live. (Message will be viewable in the browser console.)
 
 
 
