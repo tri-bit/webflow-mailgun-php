@@ -44,7 +44,7 @@ Sunday, 10-May-20 22:17:32 UTC | Quotes / Sales >  mailgun response: Queued. Tha
 
 ## Notice - Recaptcha is not re-validated by the server
 
-Recaptcha tokens can only be validated once and Weblfow validates the token on the browser so there is currently no re-validation on the php server side. (So theoretically someone could get around recaptcha and use the relay code to spam emails specified in `$relay_destinations` )
+Recaptcha tokens can only be validated once and Webflow validates the token on the browser so there is currently no re-validation on the php server side. (So theoretically someone could get around recaptcha and use the relay code to spam the emails specified in `$relay_destinations` )
 
 
 
