@@ -4,7 +4,7 @@ Deliver seperate forms on your webflow site to different emails using a simple p
 ## Installation
 
 1. Copy the webflow/webflow-script.js contents to the Footer Code section of your site's custom code page (in the webflow designer.)
-2. Upload the php code into a live folder on a standard php hosting service. (make sure to include the index.php to hide your directory contents)
+2. Upload the php code into a new live folder on a standard php hosting service. **Make sure to include the index.php to hide your directory contents which contains sensitive data**
 
 ## Setup - Webflow
 
