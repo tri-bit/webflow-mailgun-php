@@ -12,7 +12,7 @@ Deliver seperate forms on your webflow site to different emails using a simple p
 ```
 var _mailgunRelayEndpoint = 'https://*yourendpointurl*/mailgun_relay.php';
 ```
-2. Every form you wish to be relayed will need to add a custom <div> attribute of `data-relay="true"` added inside of the webflow form settings (see image below.)
+2. Every form you wish to be relayed will need to add a custom div attribute of `data-relay="true"` added inside of the webflow form settings (see image below.)
 
 3. Check and confirm you have a unique form name assigned to every Webflow form you want to relay ("Support" in the example below.) Also note the Relay attribute has been correctly added:
 
