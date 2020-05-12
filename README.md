@@ -12,11 +12,9 @@ Deliver seperate forms on your webflow site to different emails using a simple p
 ```
 var _mailgunRelayEndpoint = 'https://*yourendpointurl*/mailgun_relay.php';
 ```
-2. Every form you wish to be relayed will need to add a Div attribute of data-relay="true" added inside of the webflow project:
+2. Every form you wish to be relayed will need to add a custom <div> attribute of data-relay="true" added inside of the webflow form settings (see image below.)
 
-![alt text](https://github.com/tri-bit/webflow-mailgun-php/blob/master/docs/images/webflow-settings-relay.png?raw=true "Relay Attribute")
-
-3. Check and confirm you have unique form names assigned inside of every Webflow form you want to relay. Also note the Relay attribute has been correctly added:
+3. Check and confirm you have a unique form name assigned to every Webflow form you want to relay. Also note the Relay attribute has been correctly added:
 
 ![alt text](https://github.com/tri-bit/webflow-mailgun-php/blob/master/docs/images/webflow-form-name.png?raw=true "Form Name")
 
@@ -39,9 +37,14 @@ The default setting `$relay_logging = true;` (inside settings.php) will log rela
 
 Example logs:
 
-`Sunday, 10-May-20 22:03:47 UTC | error - destination not found for formSupport2`
-`Sunday, 10-May-20 22:17:32 UTC | Quotes / Sales >  mailgun response: Queued. Thank you.`
+```
+Sunday, 10-May-20 22:03:47 UTC | error - destination not found for formSupport2
+Sunday, 10-May-20 22:17:32 UTC | Quotes / Sales >  mailgun response: Queued. Thank you.
+```
 
+## Notice - Recaptcha is not re-validated by the server
+
+Recaptcha tokens can only be validated once and Weblfow validates the token on the browser so there is currently no re-validation on the php server side. (So theoretically someone could get around recaptcha and use the relay code to spam emails specified in `$relay_destinations` )
 
 
 

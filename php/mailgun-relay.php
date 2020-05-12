@@ -3,7 +3,9 @@
 include 'settings.php';
 header("Content-Type: application/json");
 
+
 $json = file_get_contents('php://input');
+
 
 $data = JSON_decode($json);
 
