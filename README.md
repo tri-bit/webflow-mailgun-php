@@ -33,7 +33,7 @@ By setting `$debug_destination_mode = true;` (inside settings.php) the form will
 
 ## Logging
 
-The default setting `$relay_logging = true;` (inside settings.php) will log relay usage. (But not emails addresses or email content.)
+The default setting `$relay_logging = true;` (inside settings.php) will record relay usage in a `logs` folder. (But not emails addresses or email content.)
 
 Example logs:
 

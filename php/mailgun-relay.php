@@ -56,7 +56,7 @@ function submission_to_email($json) {
     foreach ($data->formData as $entry) {
 
             if(strcmp($entry->name, 'g-recaptcha-response')=== 0) { continue; }
-            $email .= $linebreak . $entry->name . ' : ' . $entry->value;
+            $email .= $linebreak . $entry->name . ' : ' . filter_var($entry->value, FILTER_SANITIZE_STRING);
 
     }
 
