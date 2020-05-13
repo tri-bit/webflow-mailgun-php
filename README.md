@@ -1,5 +1,7 @@
 # Webflow Mailgun Php
-Deliver seperate forms on your webflow site to different emails using a simple php endpoint.
+Deliver seperate forms on your Webflow site to different emails using a simple php endpoint. 
+
+The form submission will still be recorded on Webflow's form backend and sent (If an email address is specified in Webflow's form settings page.)
 
 ## Installation
 
