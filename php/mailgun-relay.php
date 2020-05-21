@@ -72,7 +72,7 @@ function submission_to_email($json) {
         $debug_destination = new stdClass();
         $debug_destination->destination_debug_mode = 'destination would be ' . json_encode($destination) . ' - (mail not sent)';
 
-        write_log('debug_log', $debug_destination->destination_debug_mode);
+        write_log('debug_log', 'debug destination test - form submission received: ' . $data->formName);
 
         echo json_encode($debug_destination);
         return;
